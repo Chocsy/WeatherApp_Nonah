@@ -77,6 +77,7 @@ function getCurrentPosition() {
     axios.get(apiUrl).then(showTemperature);
   }
   function showTemperature(response) {
+    document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#currentTemp").innerHTML = `${Math.round(
       response.data.main.temp
     )}°C`;
