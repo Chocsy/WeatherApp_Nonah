@@ -43,6 +43,16 @@ function citySelection(event) {
     document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
       response.data.wind.speed * 3.6
     )}km/hr`;
+
+    document
+      .querySelector("#icon")
+      .setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document
+      .querySelector("#icon")
+      .setAttribute("alt", response.data.weather[0].description);
   }
   axios.get(apiUrl).then(showTemperature);
 }
@@ -78,6 +88,15 @@ function getCurrentPosition() {
   }
   function showTemperature(response) {
     document.querySelector("#city").innerHTML = response.data.name;
+    document
+      .querySelector("#icon")
+      .setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document
+      .querySelector("#icon")
+      .setAttribute("alt", response.data.weather[0].description);
     document.querySelector("#currentTemp").innerHTML = `${Math.round(
       response.data.main.temp
     )}°C`;
