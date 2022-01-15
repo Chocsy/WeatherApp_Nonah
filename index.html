@@ -28,23 +28,28 @@
     <div class="container">
       <div class="card weather-app-outline">
         <div class="card-body">
-          <form id="searchForm">
-            <div class="search-city-field">
-              <input
-                type="text"
-                placeholder="Search a city..."
-                id="citySearch"
-                autocomplete="off"
-                autofocus="on"
-              />
+          <form id="searchForm" class="mb-3">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  placeholder="Search a city..."
+                  id="citySearch"
+                  class="form-control w-60"
+                  autocomplete="off"
+                  autofocus="on"
+                />
+              </div>
+              <div class="col-4">
+                <button
+                  type="button"
+                  class="btn btn-primary current-location-button"
+                  id="currentLocationButton"
+                >
+                  Current
+                </button>
+              </div>
             </div>
-            <button
-              type="button"
-              class="btn btn-primary current-location-button"
-              id="currentLocationButton"
-            >
-              Current
-            </button>
           </form>
           <div
             class="btn-toolbar Celcius-Farenheit"
@@ -75,7 +80,11 @@
           </div>
           <div class="row">
             <div class="col">
-              <h1 id="currentTemp">20°C</h1>
+              <div class="clearfix">
+                <h1 id="currentTemp" class="float-left">
+                  20 <span class="float-left">°C</span>
+                </h1>
+              </div>
             </div>
             <div class="col">
               <ul class="rain-wind">

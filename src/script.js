@@ -30,9 +30,11 @@ function citySelection(event) {
 
   function showTemperature(response) {
     event.preventDefault();
+    let celciusTemperature = response.data.main.temp;
+
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#currentTemp").innerHTML = `${Math.round(
-      response.data.main.temp
+      celciusTemperature
     )}°C`;
     document.querySelector("#description").innerHTML =
       response.data.weather[0].description;
@@ -59,21 +61,24 @@ function citySelection(event) {
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", citySelection);
 
+function convertFarenheit(event) {
+  event.preventDefault();
+  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let convertedTemp = document.querySelector("#currentTemp");
+  convertedTemp.innerHTML = `${farenheitTemperature}°F`;
+}
+let farenheitTemp = document.querySelector("#farenheit-btn");
+farenheitTemp.addEventListener("click", convertFarenheit);
+
 function convertCelcius(event) {
   event.preventDefault();
-  let convertedTemp = document.querySelector("h1");
-  convertedTemp.innerHTML = "17°C";
+  let convertedTemp = document.querySelector("#currentTemp");
+  convertedTemp.innerHTML = `${celciusTemperature}°C`;
 }
 let celciusTemp = document.querySelector("#celcius-btn");
 celciusTemp.addEventListener("click", convertCelcius);
 
-function convertFarenheit(event) {
-  event.preventDefault();
-  let convertedTemp = document.querySelector("h1");
-  convertedTemp.innerHTML = "63°F";
-}
-let farenheitTemp = document.querySelector("#farenheit-btn");
-farenheitTemp.addEventListener("click", convertFarenheit);
+let celciusTemperature = null;
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(ShowLocation);
