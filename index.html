@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plus_Homework_Week4</title>
+    <title>Plus_Homework_Week7</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,24 +30,15 @@
         <div class="card-body">
           <form id="searchForm" class="mb-3">
             <div class="row">
-              <div class="col-8">
+              <div class="col-12">
                 <input
                   type="text"
                   placeholder="Search a city..."
                   id="citySearch"
-                  class="form-control w-60"
+                  class="form-control"
                   autocomplete="off"
                   autofocus="on"
                 />
-              </div>
-              <div class="col-4">
-                <button
-                  type="button"
-                  class="btn btn-primary current-location-button"
-                  id="currentLocationButton"
-                >
-                  Current
-                </button>
               </div>
             </div>
           </form>
@@ -81,13 +72,11 @@
           <div class="row">
             <div class="col">
               <div class="clearfix">
-                <h1 id="currentTemp" class="float-left">
-                  20 <span class="float-left">°C</span>
-                </h1>
+                <h1 id="currentTemp">20<span class="units">°C</span></h1>
               </div>
             </div>
             <div class="col">
-              <ul class="rain-wind">
+              <ul class="humidity-wind">
                 <li id="humidity">Humidity:</li>
                 <li id="wind">Wind: km/h</li>
               </ul>
@@ -99,17 +88,15 @@
             </div>
             <div class="col">
               <ul class="day-time">
+                <br />
                 <li id="currentDay">Today</li>
-                <li id="currentTime">Time</li>
               </ul>
             </div>
           </div>
           <div class="description" id="description"></div>
           <div class="main-weather-icon">
-            <img src="" id="icon" alt="cloudy" width="200px" />
-            <br />
+            <img src="" id="icon" alt="cloudy" width="150px" />
           </div>
-          <br />
           <div class="row forecast-day">
             <div class="col">Sun</div>
             <div class="col">Mon</div>
