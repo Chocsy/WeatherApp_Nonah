@@ -26,9 +26,6 @@ h2 {
 h1 {
   font-size: 80px;
 }
-h1 span {
-  font-size: 40px;
-}
 h2 {
   font-size: 50px;
 }
@@ -36,11 +33,6 @@ ul {
   list-style: none;
   justify-content: flex-start;
   padding: 0;
-}
-h1 .units {
-  font-size: 50px;
-  position: relative;
-  top: -30px;
 }
 .weather-app-outline {
   max-width: 400px;
@@ -67,9 +59,12 @@ h1 .units {
   text-transform: capitalize;
   font-size: 20px;
 }
-.rain-wind {
+.humidity-wind {
   margin-top: 30px;
 }
 .day-time {
   margin-top: 7px;
+}
+.units {
+  font-size: 50px;
 }
