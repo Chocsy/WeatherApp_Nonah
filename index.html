@@ -55,14 +55,14 @@
             >
               <button
                 type="button"
-                class="btn btn-primary btn-sm unit-button"
+                class="btn btn-primary btn-sm unit-button-celcius"
                 id="celcius-btn"
               >
                 <small>°C</small>
               </button>
               <button
                 type="button"
-                class="btn btn-primary btn-sm unit-button"
+                class="btn btn-primary btn-sm unit-button-farenheit"
                 id="farenheit-btn"
               >
                 <small>°F</small>
@@ -73,7 +73,7 @@
             <div class="col">
               <div class="clearfix">
                 <h1>
-                  <span id="currentTemp">20</span><span class="units"></span>
+                  <span id="currentTemp">20</span><span class="units">°</span>
                 </h1>
               </div>
             </div>
@@ -91,65 +91,15 @@
             <div class="col">
               <ul class="day-time">
                 <br />
-                <li id="currentDay">Today</li>
+                <li id="currentDay"></li>
               </ul>
             </div>
           </div>
           <div class="description" id="description"></div>
           <div class="main-weather-icon">
-            <img src="" id="icon" alt="cloudy" width="150px" />
+            <img src="" id="icon" alt="cloudy" width="120px" />
           </div>
-          <div class="row forecast-day">
-            <div class="col">Sun</div>
-            <div class="col">Mon</div>
-            <div class="col">Tue</div>
-            <div class="col">Wed</div>
-            <div class="col">Thu</div>
-          </div>
-          <div class="row forecast-icon">
-            <div class="col">
-              <img
-                src="src/img/cloud-rain.png"
-                alt="cloud with rain"
-                width="40px"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="src/img/sun-behind-cloud.png"
-                alt="sun-behind-cloud"
-                width="40px"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="src/img/cloud-rain.png"
-                alt="cloud with rain"
-                width="40px"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="src/img/cloud-rain.png"
-                alt="cloud with rain"
-                width="40px"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="src/img/sun-behind-cloud.png"
-                alt="sun-behind-cloud"
-                width="40px"
-              />
-            </div>
-          </div>
-          <div class="row forecast-temperature">
-            <div class="col">19°|14°</div>
-            <div class="col">19°|16°</div>
-            <div class="col">21°|18°</div>
-            <div class="col">21°|17°</div>
-            <div class="col">23°|17°</div>
-          </div>
+          <div class="weather-forecast" id="weatherForecast"></div>
         </div>
       </div>
       <footer>

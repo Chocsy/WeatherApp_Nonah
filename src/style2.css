@@ -48,7 +48,14 @@ ul {
   margin-top: 5px;
   justify-content: flex-end;
 }
-.unit-button {
+.unit-button-celcius {
+  background-color: #1a64d6;
+  border-radius: 15px;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.125);
+  padding: 2px 5px;
+}
+.unit-button-farenheit {
   background-color: #eaf6f6;
   border-radius: 15px;
   color: black;
@@ -66,5 +73,20 @@ ul {
   margin-top: 7px;
 }
 .units {
-  font-size: 50px;
+  font-size: 60px;
+  position: relative;
+  top: -15px;
+}
+.weather-forecast {
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-day {
+  font-size: 17px;
+}
+.weather-forecast-temperature {
+  font-size: 15px;
+}
+.weather-forecast-temperature-min {
+  font-size: 12px;
 }
