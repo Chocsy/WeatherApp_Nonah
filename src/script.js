@@ -18,7 +18,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day}`;
 }
 
 function formatDay(timestamp) {
@@ -104,28 +104,9 @@ function handleSubmit(event) {
   search(city.value);
 }
 
-function displayFarenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemp");
-  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = `${Math.round(farenheitTemperature)}°`;
-}
-
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = `${Math.round(celciusTemperature)}`;
-}
-
 let celciusTemperature = null;
 
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
-
-let farenheitButton = document.querySelector("#farenheit-btn");
-farenheitButton.addEventListener("click", displayFarenheitTemperature);
-
-let celciusButton = document.querySelector("#celcius-btn");
-celciusButton.addEventListener("click", displayCelciusTemperature);
 
 search("Sydney");
